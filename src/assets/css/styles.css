@@ -1,0 +1,245 @@
+/* general styles */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 0;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 { 
+  font-size: 1.15rem; 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+}
+
+small {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* base layout */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1*var(--bs-gutter-y));
+  margin-right: calc(-0.5*var(--bs-gutter-x));
+  margin-left: calc(-0.5*var(--bs-gutter-x));
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x)*.5);
+  padding-left: calc(var(--bs-gutter-x)*.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* mobile-first styles here */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.movies .movie-col {
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.movies .movie-col .movie {
+  background-color: #0d0d0c;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  transition: 0.3s;
+}
+
+.movies .movie-col .movie:hover {
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.movies .movie-col .movie img {
+  border-radius: 10px 10px 0 0;
+}
+
+.movies .movie-col .movie .movie-info {
+  padding: 10px 15px 25px;
+}
+
+/* movie info */
+ul.extra-movie-info {
+  align-items: center;
+  display: inline-flex;
+  font-size: 1rem;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+ul.extra-movie-info .rated {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+ul.extra-movie-info li {
+  padding-right: 10px;
+}
+
+ul.extra-movie-info li .movie-year {
+  align-items: center;
+  display: flex;
+}
+
+ul.extra-movie-info li .movie-year:before {
+  border: 2px solid #909090;
+  border-radius: 50%;
+  content: "";
+  height: 50%;
+  margin-right: 10px;
+  width: 50%;
+}
+
+/* stars rating styles */
+.rating-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-wrapper span {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #777;
+}
+
+.rating-wrapper input[type="radio"] {
+  display: none;
+}
+
+.rating-wrapper .rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  border: none;
+  padding: 0;
+}
+
+.rating-wrapper .rating > div {
+  display: inline-block;
+  position: relative;
+  font-size: 25px;
+}
+
+.rating-wrapper .rating div > label.gold-star:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+.rating-wrapper .rating div:hover > label:before,
+.rating-wrapper .rating div:hover ~ div > label:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+
+/* desktop */
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+
+  .movies .movie-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+
+  .movies .movie-col {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+
+  .movies .movie-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+}

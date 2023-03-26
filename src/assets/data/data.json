@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "rated": "PG",
+        "duration": "1h 27m",
+        "year": "2022",
+        "name": "Minions: The Rise of Gru",
+        "description": "Minions: The Rise of Gru is an animated comedy film that follows the mischievous Minions as they team up with a young Gru to become villains and steal a valuable gemstone from a rival villain.",
+        "img": "/images/minions.jpg",
+        "rating": [ 5, 4, 5, 3 ]
+    },
+    {
+        "id": 2,
+        "rated": "PG-13",
+        "duration": "2h 28m",
+        "year": "2021",
+        "name": "Spider-Man: No Way Home",
+        "description": "Spider-Man: No Way Home is a superhero film that sees Peter Parker teaming up with familiar faces from different timelines to stop a dangerous multiversal threat that puts the fabric of reality at risk.",
+        "img": "/images/spiderman.jpg",
+        "rating": [ 5 ]
+    },
+    {
+        "id": 3,
+        "rated": "PG-13",
+        "duration": "2h 3m",
+        "year": "2019",
+        "name": "Jumanji: The Next Level",
+        "description": "Jumanji: The Next Level is a comedy adventure film that follows the four teenagers and their elderly friends as they return to the Jumanji video game to rescue one of their own, only to discover new challenges and unexpected surprises in this next level of the game.",
+        "img": "/images/jumanji.jpg",
+        "rating": [ 3, 4, 2 ]
+    },
+    {
+        "id": 4,
+        "rated": "PG",
+        "duration": "1h 27m",
+        "year": "2020",
+        "name": "The Croods: A New Age",
+        "description": "The Croods: A New Age is an animated adventure comedy film that follows the prehistoric Crood family as they encounter a more advanced family, the Bettermans, and must navigate new challenges and a clash of cultures while working together to save their homes from a common enemy.",
+        "img": "/images/croods.jpg",
+        "rating": [ 5, 5, 4, 1, 5 ]
+    }
+]
