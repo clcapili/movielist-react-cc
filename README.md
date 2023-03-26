@@ -1,3 +1,3 @@
 # Movie List with Rating Feature built with React App
 
-This project was built for a school project.
+This project was built with React that lets users create and manage a list of movies with ratings.
